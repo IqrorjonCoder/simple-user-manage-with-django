@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>main page</title>
+</head>
+
+    <style>
+        *{
+            text-align: center;
+        }
+    </style>
+
+<body>
+
+    <h1>hi iqrorjoncoder !</h1>
+    <a href="./admin" target="_blank">move to admin panel</a>
+    <br>
+    <br>
+    <a href="./adding" target="_blank">move to adding panel</a>
+
+    <ul>
+        <h3><br><br><br><br> Users: </h3>
+        {% for sinfdosh in sinf %}
+         <li>{{ sinfdosh.firstname }} {{ sinfdosh.lastname }} <a href="{{ sinfdosh.firstname }}_{{ sinfdosh.lastname }}__delete">delete</a>   <a href="{{ sinfdosh.firstname }}_{{ sinfdosh.lastname }}__edit"> edit</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
